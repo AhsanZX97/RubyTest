@@ -1,3 +1,6 @@
+require './lib/methods' 
+require './lib/mostVisits' 
+
 describe 'Most Page Visits' do
     before(:each) do
         @webserver = getHash('./lib/webserver.log')

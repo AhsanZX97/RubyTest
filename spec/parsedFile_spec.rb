@@ -1,6 +1,8 @@
-require './lib/Parser' 
+require './lib/methods' 
 
 describe 'File parsed' do
+    include MyMethods
+    
     before(:each) do
         @webserver = getHash('./lib/webserver.log')
     end

@@ -1,7 +1,12 @@
+require './lib/methods' 
+require './lib/mostVisits' 
+
 describe 'Most Page Visits' do
+    include MyMethods
+    
     before(:each) do
         @webserver = getHash('./lib/webserver.log')
-        @mostVisits = mostVisits.new(@webserver)
+        @mostVisits = MostVisits.new(@webserver)
     end
 
     it 'expect /contact to be 89 visits' do
