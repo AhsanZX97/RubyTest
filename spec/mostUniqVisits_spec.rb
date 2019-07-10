@@ -1,10 +1,12 @@
 require './lib/methods' 
-require './lib/mostVisits' 
+require './lib/mostUniqVisits' 
 
 describe 'Most Page Visits' do
+    include MyMethods
+    
     before(:each) do
         @webserver = getHash('./lib/webserver.log')
-        @mostUniqs = mostUniqs.new(@webserver)
+        @mostUniqs = MostUniqVisits.new(@webserver)
     end
 
     it 'expect /about/2 to be 22 unique visits' do
