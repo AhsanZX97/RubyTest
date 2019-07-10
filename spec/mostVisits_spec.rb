@@ -1,7 +1,7 @@
 require './lib/methods' 
 require './lib/mostVisits' 
 
-describe 'Most Page Visits' do
+describe 'Links visited for' do
     include MyMethods
     
     before(:each) do
@@ -9,11 +9,11 @@ describe 'Most Page Visits' do
         @mostVisits = MostVisits.new(@webserver)
     end
 
-    it 'expect /contact to be 89 visits' do
+    it '/contact should be 89 visits' do
         expect(@mostVisits.getVisits('/contact')).to eq 89
     end
 
-    it 'expect the most visited link to be /about/2' do
+    it '/about/2 should be the top visited link' do
         expect(@mostVisits.getLink(0)).to eq '/about/2'
     end
 end
