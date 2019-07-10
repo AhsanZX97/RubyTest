@@ -1,8 +1,8 @@
 require './lib/methods' 
 
-
 class MostUniqVisits
     include MyMethods
+    
     def initialize(hash)  
         @hash = getMostUniqVisits(hash)
     end  
@@ -19,12 +19,4 @@ class MostUniqVisits
         end 
         return answer
     end
-end
-
-if __FILE__ == $0
-    include MyMethods
-    hashFile = getHash(ARGV[0])
-    uniqVisits = MostUniqVisits.new(hashFile)
-    p uniqVisits.getString()
-    exit 1
 end

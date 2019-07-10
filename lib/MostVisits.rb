@@ -1,8 +1,8 @@
 require './lib/methods' 
 
-
 class MostVisits
     include MyMethods
+    
     def initialize(hash)  
         @hash = getMostVisits(hash)
     end  
@@ -18,12 +18,4 @@ class MostVisits
         end 
         return answer
     end
-end
-
-if __FILE__ == $0
-    include MyMethods
-    hashFile = getHash(ARGV[0])
-    mostVisits = MostVisits.new(hashFile)
-    p mostVisits.getString()
-    exit 1
 end

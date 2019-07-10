@@ -1,5 +1,5 @@
 require './lib/methods' 
-require './lib/mostUniqVisits' 
+require './lib/MostUniqVisits' 
 
 describe 'Most Unique Page Visits' do
     include MyMethods
