@@ -1,7 +1,7 @@
 require './lib/methods' 
 require './lib/mostUniqVisits' 
 
-describe 'Most Page Visits' do
+describe 'Most Unique Page Visits' do
     include MyMethods
     
     before(:each) do
